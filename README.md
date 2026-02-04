@@ -149,3 +149,10 @@ Decision validity flag for symbol synchronization
 - Suitable for real-time underwater acoustic receivers
 - Can be extended to MFSK or adaptive threshold detection
 
+ ## How to Run
+1. Open the Simulink model in MATLAB
+2. Ensure `src/` is added to MATLAB path
+3. Run simulation
+4. Observe transmitted/received bits and BER
+
+
