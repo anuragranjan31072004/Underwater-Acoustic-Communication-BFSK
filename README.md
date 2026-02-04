@@ -1,9 +1,3 @@
-Nice — this content is **good**, it just needs to be **merged cleanly** with what you already have (Goertzel detector + BER results) so the README looks **professional and complete**, not stitched together.
-
-Below is a **fully merged, polished README** you can **directly paste** into your GitHub `README.md`.
-
----
-
 # Underwater Acoustic Communication using BFSK
 
 ## Overview
