@@ -97,7 +97,8 @@ Bottom plot: Received bits
 
 Frequency detection is implemented using a sample-by-sample Goertzel algorithm, avoiding external buffers and ensuring real-time compatibility.
 
-![Goertzel Detection Output](images/command_window_output.png)
+![Goertzel Detection Output](images/transmitted_received_bits.png)
+
 
 
 Key Observations:
@@ -112,7 +113,8 @@ Optimal delay selected using BER minimization
 
 BER is computed by comparing transmitted and received bit streams under different delays and channel conditions.
 
-![BER Results](images/ber_results.png)
+![BER Analysis Results](images/ber_analysis_results.png)
+
 
 
 Best performance achieved at:
