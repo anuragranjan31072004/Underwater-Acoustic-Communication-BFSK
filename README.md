@@ -97,9 +97,6 @@ Bottom plot: Received bits
 
 Frequency detection is implemented using a sample-by-sample Goertzel algorithm, avoiding external buffers and ensuring real-time compatibility.
 
-![Goertzel Detection Output](images/transmitted_received_bits.png)
-
-
 
 Key Observations:
 
@@ -146,3 +143,9 @@ Decision validity flag for symbol synchronization
 * Marine monitoring systems
 * Defense and submarine communications
 * Low-data-rate underwater telemetry
+
+## Implementation Notes
+- Detector implemented as a sample-by-sample Goertzel algorithm
+- Suitable for real-time underwater acoustic receivers
+- Can be extended to MFSK or adaptive threshold detection
+
