@@ -77,18 +77,65 @@ The detector operates in a **sample-by-sample manner**, making it suitable for r
 
 ---
 
-## Results
 
-Simulation results demonstrate reliable data transmission under underwater channel conditions:
+## Simulation Results
 
-* Transmitted and received bitstreams closely match under optimal synchronization
-* Minimum BER of approximately **3.5%** achieved at zero delay
-* BER increases with delay and noise, as expected
-* Waveform and frequency-domain analysis validate correct BFSK demodulation
+1️⃣ Transmitted and Received Bit Comparison
 
-These results confirm the robustness of BFSK modulation combined with Goertzel-based detection for underwater acoustic communication.
+The following simulation shows the comparison between transmitted BFSK bits and the received bits after passing through the underwater acoustic channel.
 
----
+Top plot   : Transmitted bits
+
+Bottom plot: Received bits
+
+![Transmitted vs Received Bits](images/transmitted_received_bits.png)
+
+
+✔ Shows correct demodulation using frequency detection.
+
+2️⃣ Goertzel-Based Frequency Detection
+
+Frequency detection is implemented using a sample-by-sample Goertzel algorithm, avoiding external buffers and ensuring real-time compatibility.
+
+![Goertzel Detection Output](images/command_window_output.png)
+
+
+Key Observations:
+
+Energy at target frequencies (600 Hz & 1100 Hz)
+
+Bit decision based on dominant frequency
+
+Optimal delay selected using BER minimization
+
+3️⃣ Bit Error Rate (BER) Analysis
+
+BER is computed by comparing transmitted and received bit streams under different delays and channel conditions.
+
+![BER Results](images/ber_results.png)
+
+
+Best performance achieved at:
+
+Delay = 0
+
+BER ≈ 3.5%
+
+🧠 Receiver Algorithm (Core Logic)
+
+The BFSK receiver uses a Goertzel-based detector implemented in MATLAB:
+
+📁 src/goertzel_fsk_detector.m
+
+
+Key features:
+
+Persistent buffering (400 samples / bit)
+
+Dual-frequency energy comparison
+
+Decision validity flag for symbol synchronization
+
 
 ## Applications
 
@@ -97,4 +144,3 @@ These results confirm the robustness of BFSK modulation combined with Goertzel-b
 * Marine monitoring systems
 * Defense and submarine communications
 * Low-data-rate underwater telemetry
-
